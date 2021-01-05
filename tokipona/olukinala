@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>O LUKIN ALA</title>
+    <style>
+      body {background-color: black;text-align: center; font-family: Arial, sans-serif;}
+      h1,h2,h3,p {color: white; text-align: center}
+      a    {color: lightblue; text-align: center}
+    </style>
+  </head>
+<html>
+<body>
+  <div style="margin-top: 30px">
+    <h1 style="font-size: 500%"> O LUKIN ALA</h1>
+    <h1> ni li lipu pi lukin ala suli</h1>
+    <h2> sina lukin e ni la o tawa.</h2>
+    <h2> sina toki e ni tawa jan mute la lipu ni li kama ike.</h2>
+    <br>
+    <br>
+    <br>
+    <p>tenpo ni la sina lukin ala lukin? lukin la...</p>
+    <h3>sina pona!</h3>
+    
+    <a href="https://wyub.github.io" style="position:fixed; bottom:10px; left:10px">tawa lipu Wyubsite</a>
+  </div>
+</body>
+</html>
