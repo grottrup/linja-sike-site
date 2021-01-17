@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>arcsinc</title>
+    <style>
+      body {background-color: black; text-align: center; font-family: Arial, sans-serif; color: white}
+      a    {color: lightblue}
+      div.math > * {margin: 0px}
+      div.math {font-family: Courier New;text-align: left; display: inline-block}
+      table, th, td {border: 1px solid white; border-collapse: collapse;}
+      table {margin-left: auto; margin-right: auto;}
+      th, td {padding: 5px;}
+    </style>
+  </head>
+<html>
+<body>
+  <div style="margin-top: 30px">
+    <h1>Introduction to arcsinc</h1>
+    <p>The arcsinc function is the inverse of the (unnormalized) sinc function, or sin(x)/x</p>
+    <p>In other words, y=arcsin(x) if sin(y)/y=x</p>
+  </div>
+  <div>
+    <h2>Motivation</h2>
+    <p>The arcsinc function was necessary in providing a solution to the <a>Arctan and Newton's Method</a> problem</p>
+  </div>
+  <div>
+    <h2>Values</h2>
+    <h3<a href="arcsinc/graph">Click to view graph</a>
+    <p><a>Generate your own values!</a><p>
+    <table>
+      <tr>
+        <th>Input</th>
+        <th>Output</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>π</td>
+      </tr>
+      <tr>
+        <td>0.1</td>
+        <td>2.852341894450092</td>
+      </tr>
+      <tr>
+        <td>0.2</td>
+        <td>2.595739079649799</td>
+      </tr>
+      <tr>
+        <td>0.3</td>
+        <td>2.356441149856161</td>
+      </tr>
+      <tr>
+        <td>0.4</td>
+        <td>2.1253451913874692</td>
+      </tr>
+      <tr>
+        <td>0.5</td>
+        <td>1.895494267033981</td>
+      </tr>
+      <tr>
+        <td>0.6</td>
+        <td>1.6600348132646192</td>
+      </tr>
+      <tr>
+        <td>2/π</td>
+        <td>π/2</td>
+      </tr>
+      <tr>
+        <td>0.7</td>
+        <td>1.410185376648158</td>
+      </tr>
+      <tr>
+        <td>0.8</td>
+        <td>1.1311025856512829</td>
+      </tr>
+      <tr>
+        <td>0.9</td>
+        <td>0.7866830720492123</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h2>Properties</h2>
+    <p>arcsinc(x) has a domain of [-0.217233628211222, 1]<br> and a range of [0, 4.493409457909064]</p>
+    <p> The derivative of arcsinc(x) is:</p>
+    <div class="math">
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;arcsinc(x)</p>
+      <p>-----------------</p>
+      <p>cos(arcsinc(x))-x</p>
+    </div>
+    <p> and its integral is:</p>
+    <div class="math">
+      <p>x*arcsinc(x)-Si(arcsinc(x))</p>
+    </div>
+    <p>where Si(x) is the sine integral function</p>
+    <p>y=arcsinc(x) satisfies the differential equation:</p>
+    <div class="math">
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y</p>
+      <p>y' = --------</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cos(y)-x</p>
+    </div>
+    <p><a>Click to see series representations</a></p>
+  </div>
+  <a href="https://wyub.github.io/math.html" style="position:fixed; bottom:10px; left:10px">Back</a>
+</body>
+</html>
