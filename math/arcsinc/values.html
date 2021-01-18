@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Value generator</title>
+    <style>
+      body {background-color: black; text-align: center; font-family: Arial, sans-serif; color: white}
+      a    {color: lightblue}
+    </style>
+  </head>
+<html>
+<body>
+  <div style="margin-top: 30px">
+    <h1>Arcsinc Values</h1>
+  </div>
+  <div>
+    <input type="number" id="input"><br>
+    <button onclick="calculate()">Calculate value of arcsinc</button>
+    <p id="output">&nbsp;</p>
+  </div>
+  <script>
+    function f(x,numin){
+      return (Math.sin(x)/x)-numin;
+    }
+    function fprime(x){
+      return (x*Math.cos(x)-Math.sin(x))/(x*x);
+    }
+    function calculate(){
+      var input = parseFloat(document.getElementById("input").value);
+      var output = document.getElementById("output");
+      if (-0.2172<input&&input<=0.9999){
+        var x=1;
+        for(i=0;i<10;i++){
+          x=x-f(x,input)/fprime(x)
+        }
+        output.innerHTML = x;
+      }
+      else{
+        output.innerHTML = "Number is outside range";
+      }
+    }
+  </script>
+  <a href="math/arcsinc" style="position:fixed; bottom:10px; left:10px">Back</a>
+</body>
+</html>
