@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>95%</title>
+    <style>
+        #circle {
+    position: relative;
+    border-radius: 50%;
+    background:white;
+    width:50px;
+    height:50px;
+    display: block;
+}
+#goal {
+    position: fixed;
+    border-radius: 50%;
+    background:green;
+    width:50px;
+    height:50px;
+    display: block;
+}
+      body {background-color: black; text-align: center; font-family: Arial, sans-serif; color: white}
+      a    {color: lightblue}
+    </style>
+  </head>
+<html>
+<body id="body">
+  <div style="margin-top: 30px">
+  <h1>95% Chance</h2>
+  <h2>Get the white ball to the green goal..if you're lucky</h2>
+  <p id="timer"></p>
+</div>
+  <div id="goal"></div>
+	<div id="circle"></div>
+</div>
+<script>
+  document.onkeydown = checkKey;
+var horizontal = Math.floor(window.innerWidth/2)-100;
+var vertical = Math.floor(window.innerHeight/2)-100
+document.getElementById("circle").style.marginLeft = horizontal + "px";
+document.getElementById("circle").style.marginTop = vertical + "px";
+document.getElementById("goal").style.marginLeft = horizontal+200+"px";
+document.getElementById("goal").style.marginTop = vertical+100+"px";
+if (Math.random()<0.95){
+  var change=0;
+}
+else{
+  var change=10;
+}
+function checkKey(e) {
+    e = e || window.event;
+    if (e.keyCode == '38') {
+        vertical -= change;
+        document.getElementById("circle").style.marginTop = vertical + "px";
+        detectWin();
+    }
+    else if (e.keyCode == '40') {
+        vertical += change;
+        document.getElementById("circle").style.marginTop = vertical + "px";
+        detectWin();
+    }
+    else if (e.keyCode == '37') {
+       	horizontal -= change;
+        document.getElementById("circle").style.marginLeft = horizontal + "px";
+        detectWin();
+    }
+    else if (e.keyCode == '39') {
+       	horizontal += change;
+        document.getElementById("circle").style.marginLeft = horizontal + "px";
+        detectWin();
+    }
+}
+var timer=0;
+var timerInterval=0.01;
+setInterval(function(){timer+=timerInterval;document.getElementById("timer").innerHTML=timer.toFixed(2);}, 10);
+function detectWin(){
+  if (document.getElementById("circle").style.marginLeft == Math.floor(window.innerWidth/2)+100+"px" && document.getElementById("circle").style.marginTop == Math.floor(window.innerHeight/2)+"px"){
+    timerInterval=0;
+    document.getElementById("timer").style.color="#00FF00";
+  }
+}
+</script>
+
+</body>
+</html>
