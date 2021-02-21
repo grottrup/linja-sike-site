@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      @font-face {font-family: linjasike; src: url(linja-sike-beta-2-for-u.otf)}
+    </style>
+  </head>
+  <body>
+
+<canvas id="myCanvas" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+<button onclick="save()"">download</button>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.font = "30px linjasike";
+
+ctx.fillText("Hello World",10,50);
+function save(){
+    var img = canvas.toDataURL("image/png");
+    document.write('<img src="'+img+'"/>');
+}
+</script>
+
+</body>
+</html>
