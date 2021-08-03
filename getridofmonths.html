@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GET RID OF MONTHS</title>
+    <style>
+      body {background-color: black;text-align: center; font-family: Arial, sans-serif; text-align: center}
+      h1,h2,h3,p,li {color: white}
+      a    {color: lightblue; text-align: center}
+      div {margin:auto}
+    </style>
+  </head>
+<html>
+<body id="body">
+  <div id="bigdiv" style="margin-top: 30px">
+    <h1> GET RID OF MONTHS </h1>
+    <h3> Under a rational calendar system, today would be: </h3>
+    <h2 id="day"> </h2>
+    <h1> Why? </h1>
+    <p> Months were invented to keep track of the moon, but they fail at even doing this simple task! </p>
+    <p> The phases of the moon take 29.5 days to cycle, which means that if the months lined up with the moon, there would be an average of 12.4 months per year.</p>
+    <p> But there aren't! There are always exactly 12, meaning that the months must be longer than they have to be in order to be useful.</p>
+    <p> There are two solutions to this: either adopt a lunisolar calendar (one where the number of months varies in a year), which hurts my head, or GET RID OF MONTHS!</p>
+    <p> Everything could be so much simpler if we only had to keep track of 2 numbers: the year and the day of the year!</p>
+    <h2> What about weeks? </h2>
+    <p> Under the new system, weeks and days of the week won't be necessary, as regular cycles could be made by looking at the last digit </p>
+    <p> e.g. "I have work on 1-4 days and 6-8 days" means you have 1.4% more weekend!</p>
+    <p> Other similar solutions could be created as necessary for "monthly" and month-related cycles</p>
+    <h3>If you have any inquiries, feel free to <a href="https://wyub.github.io/aboutme.html">contact me!</a></h3>
+    <a href="https://wyub.github.io" style="position:fixed; bottom:10px; left:10px">Back to the Wyubsite</a>
+  </div>
+</body>
+<script>
+  if (window.innerWidth > window.innerHeight){
+    document.getElementById("bigdiv").style.width = "50%";
+  }
+  else{
+    document.getElementById("bigdiv").style.width = "100%";
+    document.getElementById("body").style.fontSize = "200%";
+  }
+  var now = new Date();
+  var start = new Date(now.getFullYear(), 0, 0);
+  var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+  var oneDay = 1000 * 60 * 60 * 24;
+  var day = Math.floor(diff / oneDay);
+  document.getElementById("day").innerHTML = now.getFullYear() +'-' + day;
+  
+</script>
+</html>
