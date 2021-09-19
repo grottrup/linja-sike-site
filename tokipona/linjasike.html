@@ -3,24 +3,62 @@
   <head>
     <title>linja sike</title>
     <style>
-      body {background-color: black;text-align: center; font-family: linjasike; text-align: center;font-size: 190%}
+      body {background-color: black;text-align: center; text-align: center}
       body > * {margin: 20px}
       h1,h2,h3,p {color: white}
       a    {color: lightblue; text-align: center}
       @font-face {font-family: linjasike; src: url(linja-sike-5.otf)}
-      textarea {rows="4" cols="10"}
+      span {font-family: linjasike}
+      #sp {font-family: linjasike;font-size: 190%}
+      #en {font-family:Arial,sans-serif;font-size: 120%;display:none}
+      #enbutton {font-family:Arial, sans-serif}
+      div {margin:auto}
     </style>
   </head>
 <html>
-<body>
+<body">
+  <div id="sp">
   <h1>linja-sike</h1>
   <h2>tan jewnikijetesantakalu/kulupu-poki</h2>
+  <button id="enbutton" onclick="ante()" >English</button>
   <h3>tan mi-ala a. o toki-ala e wile-sona sina tawa mi</h3>
   <p>ona li jo e nimi sin mute (waleja mulapisu kokosila Pingo) e sitelen-mute pi-__nimi-mute (jasima+isipin mu+soweli kijetesantakalu+suwi) e sitelen-namako mute (sowelin sowelis soweli+pona)</p>
   <h2><a href="linja-sike-5.otf">o kama-jo e nanpa luka a</a></h2>
-  <h3><a href="https://docs.google.com/document/d/1d8kUIAVlB-JNgK3LWr_zVCuUOZTh2hF7CfC6xQgxsBs/edit">lipu-sona pi-__nasin__kepeken</a></h3>
-  <h1 style="margin: 30px">o toki a</h1>
-  <textarea style="font-family: linjasike;font-size: 200%;margin: 0px" spellcheck="false">poki ni li pakala. o kepeken ala</textarea>
+  <h3><a href="https://docs.google.com/document/d/1d8kUIAVlB-JNgK3LWr_zVCuUOZTh2hF7CfC6xQgxsBs/edit">lipu-sona pi-__nasin__kepeken</a></h3>>
   <a href="https://wyub.github.io/tokipona.html" style="position:fixed; bottom:10px; left:10px">o tawa</a>
+  </div>
+
+  <div id="en">
+  <h1>linja sike</h1>
+  <h2>by jan Lipamanka/kulupu poki</h2>
+  <button onclick="ante()" style="font-family:linjasike; font-size: 150%"">sitelen pona</button>
+  <h3>NOT BY ME. Please don't ask me questions/give me suggestions.</h3>
+  <p>linja sike has many new (post-pu) words <span>(waleja mulapisu kokosila Pingo)</span>, many compound glyphs <span>(jasima+isipin mu+soweli kijetesantakalu+suwi)</span>, and many small glyph adjustments <span>(sowelin sowelis soweli+pona)<span></p>
+  <h2><a href="linja-sike-5.otf">Obtain version 5.0!</a></h2>
+  <h3><a href="https://docs.google.com/document/d/1d8kUIAVlB-JNgK3LWr_zVCuUOZTh2hF7CfC6xQgxsBs/edit">Documentation</a></h3>>
+  <a href="https://wyub.github.io/tokipona.html" style="position:fixed; bottom:10px; left:10px">Back</a>
+  </div>
+  <script>
+    if (window.innerWidth > window.innerHeight){
+      document.getElementById("en").style.width = "50%";
+    }
+    else{
+      document.getElementById("sp").style.fontSize = "400%";
+      document.getElementById("en").style.fontSize = "240%";
+      document.getElementById("enbutton").style.fontSize = "70%";
+    }
+    var issp = true;
+    function ante(){
+      if (issp){
+        document.getElementById("sp").style.display = "none";
+        document.getElementById("en").style.display = "block";
+      }
+      else{
+        document.getElementById("en").style.display = "none";
+        document.getElementById("sp").style.display = "block";
+      }
+      issp=!issp
+    }
+  </script>
 </body>
 </html>
